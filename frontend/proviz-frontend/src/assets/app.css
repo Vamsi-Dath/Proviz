@@ -1,0 +1,12 @@
+
+.btn{
+    background-color: rgb(167, 213, 201);
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    box-shadow:5px 3px;
+}
+.cnt{
+    margin: auto;
+    padding: 10px;
+}
