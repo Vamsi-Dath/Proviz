@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import BoxItem from './components/BoxItem'
+import FlowComponent from './components/FlowComponent';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,8 +16,8 @@ function App() {
     getData()
   }, [])
 
-  const getData = () => {  
-    fetch(BACKEND_URL + '/api/data',{
+  const getData = () => {
+    fetch(BACKEND_URL + '/api/data', {
       method: 'GET'
     }).then((response) => response.json())
       .then((data) => {
@@ -26,12 +27,17 @@ function App() {
 
   return (
     <>
-      <ul>
-        {data && data.map((item, index) => (
-          <li key={index}>{item.greeting}</li>
-        ))}
-      </ul>
-      <BoxItem cnt={count} onBtnClick={handleClick} />
+      <div>
+        <ul>
+          {data && data.map((item, index) => (
+            <li key={index}>{item.greeting}</li>
+          ))}
+        </ul>
+        <BoxItem cnt={count} onBtnClick={handleClick} />
+      </div>
+      <div className='flow-container'>
+        <FlowComponent />
+      </div>
     </>
   )
 }

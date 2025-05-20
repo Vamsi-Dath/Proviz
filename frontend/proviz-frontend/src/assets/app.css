@@ -10,3 +10,10 @@
     margin: auto;
     padding: 10px;
 }
+.flow-container{
+    height: 80vh;
+    width: 80vh;
+    border: 1px solid black;
+    margin:10px;
+
+}
